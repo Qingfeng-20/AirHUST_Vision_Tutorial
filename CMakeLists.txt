@@ -3,7 +3,9 @@ project(lab1_1)
 
 find_package(OpenCV REQUIRED) 
 
-set(sc_executable_name ${PROJECT_NAME})
+set(SOURCES
+    src/main.cpp
+    src/image_io.cpp)
 aux_source_directory(src sc_executable_source)
 add_executable(${sc_executable_name} ${sc_executable_source})
 target_include_directories(${sc_executable_name} BEFORE PUBLIC include)
